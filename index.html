@@ -121,7 +121,7 @@
             <center>
               <select class="form-control" id="leavingFrom">
                 <option value="0">Choose a station...</option>
-                <option value="0">Santolan</option>
+                <option value="1">Santolan</option>
                 <option value="5.1">Katipunan</option>
                 <option value="8.6">Betty Go-Belmonte</option>
                 <option value="9.9">Gilmore</option>
@@ -136,7 +136,7 @@
             <br>
               <select class="form-control" id="goingTo">
                 <option value="0">Choose a station...</option>
-                <option value="0">Santolan</option>
+                <option value="1">Santolan</option>
                 <option value="5.1">Katipunan</option>
                 <option value="8.6">Betty Go-Belmonte</option>
                 <option value="9.9">Gilmore</option>
@@ -255,7 +255,19 @@
         </form>
       </div>
           <script>
-            
+           // Show popup when a station is selected
+document.getElementById("leavingFrom").addEventListener("change", function() {
+    if (this.value !== "0") {
+        alert("Select a spot");
+    }
+});
+
+document.getElementById("goingTo").addEventListener("change", function() {
+    if (this.value !== "0") {
+        alert("Select a spot");
+    }
+});
+ 
           </script>
           
           <script>
