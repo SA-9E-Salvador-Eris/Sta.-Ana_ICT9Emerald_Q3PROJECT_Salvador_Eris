@@ -322,7 +322,7 @@ function discountFare() {
     let goingTo = document.getElementById("goingTo").value;
 
     // Check if both stations are selected
-    if (leavingFrom === "0" || goingTo === "0") {
+    if (leavingFrom == "0" || goingTo == "0") {
         alert("You haven't chosen a station yet");
         document.getElementById("DisplayAns").innerHTML = "";  // Clear the fare display
         return;  // Stop further execution
