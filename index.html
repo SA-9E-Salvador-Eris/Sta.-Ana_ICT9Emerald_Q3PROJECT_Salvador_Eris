@@ -190,18 +190,6 @@
           
           //display answer in a paragraph element
           document.getElementById("DisplayAns").innerHTML = fare;
-	  // Show popup when a station is selected
-document.getElementById("leavingFrom").addEventListener("change", function() {
-    if (leavingFrom == "0") {
-        alert("Select a spot");
-    }
-});
-
-document.getElementById("goingTo").addEventListener("change", function() {
-    if (goingTo == "0") {
-        alert("Select a spot");
-    }
-});
 
     }
       </script>
@@ -308,5 +296,46 @@ document.getElementById("goingTo").addEventListener("change", function() {
       </div>
       </center>
     </div>
+	<script>// Compute for regular fare
+function calculateFare() {
+    let leavingFrom = document.getElementById("leavingFrom").value;
+    let goingTo = document.getElementById("goingTo").value;
+
+    // Check if both stations are selected
+    if (leavingFrom === "0" || goingTo === "0") {
+        alert("You haven't chosen a station yet");
+        document.getElementById("DisplayAns").innerHTML = "";  // Clear the fare display
+        return;  // Stop further execution
+    }
+
+    let basefare = 14;
+    let distance = goingTo - leavingFrom;
+    let fare = distance + basefare; 
+
+    // Display the calculated fare
+    document.getElementById("DisplayAns").innerHTML = fare;
+}
+
+// Compute for discounted fare
+function discountFare() {
+    let leavingFrom = document.getElementById("leavingFrom").value;
+    let goingTo = document.getElementById("goingTo").value;
+
+    // Check if both stations are selected
+    if (leavingFrom === "0" || goingTo === "0") {
+        alert("You haven't chosen a station yet");
+        document.getElementById("DisplayAns").innerHTML = "";  // Clear the fare display
+        return;  // Stop further execution
+    }
+
+    let basefare = 14;
+    let distance = goingTo - leavingFrom;
+    let disc_fare = 0.80 * (distance + basefare); 
+    let fare = disc_fare.toFixed(2);
+
+    // Display the discounted fare
+    document.getElementById("DisplayAns").innerHTML = fare;
+}
+</script>
 </body>
 </html>
