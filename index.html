@@ -192,7 +192,7 @@
           document.getElementById("DisplayAns").innerHTML = fare;
 	  // Show popup when a station is selected
 document.getElementById("leavingFrom").addEventListener("change", function() {
-    if (this.value !== "0") {
+    if (this.value == "0") {
         alert("Select a spot");
     }
 });
