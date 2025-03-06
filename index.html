@@ -91,14 +91,16 @@
     function searchRedirect() {
         var searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
 
-        // Check if the search query is 'mrt'
-        if (searchQuery == 'mrt') {
-            window.location.href = 'index.html';  // Redirect to mrt.html
+        // Check if the search query is 'mrt' (case insensitive)
+        if (searchQuery === 'mrt') {
+            // Check if 'mrt.html' exists in the correct directory
+            window.location.href = 'mrt.html';  // Redirect to mrt.html (relative path)
         } else {
             alert('Page not found for your search!');
         }
     }
 </script>
+
 
 
     </div>
