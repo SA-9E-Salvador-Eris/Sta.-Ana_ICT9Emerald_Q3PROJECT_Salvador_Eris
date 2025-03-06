@@ -31,7 +31,7 @@
           width: 320px;
         }
         #leavingFrom, #goingTo, #comment{
-          background-color: #5279ab;
+          background-color: #208726;
         }
         #card{
           width: 500px;
@@ -85,7 +85,7 @@
    
    <form class="d-flex" id="searchForm">
     <input class="form-control" type="text" id="searchInput" placeholder="Search..." required>
-    <button class="btn btn-warning" type="button" onclick="searchRedirect()">Search</button>
+    <button class="btn btn-primary" type="button" onclick="searchRedirect()">Search</button>
 </form>
 
 <script>
@@ -102,14 +102,14 @@
     
 	 if (searchQuery === 'lrt 2') {
             // Check if 'mrt.html' exists in the correct directory
-            window.location.href = 'index.html';  // Redirect to mrt.html (relative path)
+            window.location.href = 'index.html';  // Redirect to index.html (relative path)
         } else {
             alert('Sorry pal, this seems to not exist');
         }
 
 	 if (searchQuery === 'lrt 1') {
             // Check if 'mrt.html' exists in the correct directory
-            window.location.href = 'lrt.html';  // Redirect to mrt.html (relative path)
+            window.location.href = 'lrt.html';  // Redirect to lrt.html (relative path)
         } else {
             alert('Sorry pal, this seems to not exist');
         }
@@ -218,7 +218,7 @@
 
      </div>
 
-	<div class="col-md-4" style="background-color: #04175c; color: white; height: 600px; width: 470px;">
+	<div class="col-md-4" style="background-color: #208726; color: white; height: 600px; width: 470px;">
         <script>  
         document.write("<h2>Ticket Price:</h2>");
         </script>
