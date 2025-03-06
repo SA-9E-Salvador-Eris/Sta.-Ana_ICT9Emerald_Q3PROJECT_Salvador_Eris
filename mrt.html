@@ -82,33 +82,38 @@
         <a class="nav-link" href="#help">Help</a>
       </li>
     </ul>
-    <form class="d-flex" id="searchForm">
+   
+   <form class="d-flex" id="searchForm">
     <input class="form-control" type="text" id="searchInput" placeholder="Search..." required>
     <button class="btn btn-warning" type="button" onclick="searchRedirect()">Search</button>
 </form>
+
 <script>
     function searchRedirect() {
-        // Get the value entered in the search input
         var searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
 
-        // Check the search query and redirect accordingly
+        // Check if the search query is 'mrt' (case insensitive)
         if (searchQuery === 'mrt') {
-            window.location.href = 'mrt.html';  // Redirect to mrt.html
+            // Check if 'mrt.html' exists in the correct directory
+            window.location.href = 'mrt.html';  // Redirect to mrt.html (relative path)
         } else {
-            alert('Page not found for your search!');
+            alert('Sorry pal, this seems to not exist');
         }
-	
-	if (searchQuery === 'lrt-1') {
-            window.location.href = 'lrt.html';  // Redirect to mrt.html
+    
+	 if (searchQuery === 'lrt 2') {
+            // Check if 'mrt.html' exists in the correct directory
+            window.location.href = 'index.html';  // Redirect to mrt.html (relative path)
         } else {
-            alert('Page not found for your search!');
+            alert('Sorry pal, this seems to not exist');
         }
 
-	if (searchQuery === 'lrt-2') {
-            window.location.href = 'index.html';  // Redirect to mrt.html
+	 if (searchQuery === 'lrt 1') {
+            // Check if 'mrt.html' exists in the correct directory
+            window.location.href = 'lrt.html';  // Redirect to mrt.html (relative path)
         } else {
-            alert('Page not found for your search!');
+            alert('Sorry pal, this seems to not exist');
         }
+
     }
 </script>
 
