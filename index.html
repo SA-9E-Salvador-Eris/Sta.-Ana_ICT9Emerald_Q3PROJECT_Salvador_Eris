@@ -9,7 +9,7 @@
     <style>
       	body{
       		font-family: Rockwell;
-      		background-color: #f7eac3;
+      		background-color: #6a81b0;
       		}
         #train{
           height: 200px;
@@ -31,7 +31,7 @@
           width: 320px;
         }
         #leavingFrom, #goingTo, #comment{
-          background-color: #5279ab;
+          background-color: #8ff2f7;
         }
         #card{
           width: 500px;
@@ -65,9 +65,9 @@
     </style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #5279ab;">
+	<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #8ff2f7;">
 <div class="container-fluid">
-  <a class="navbar-brand" href="index.html"><img id="logo" src="es.jpg"></a>
+  <a class="navbar-brand" href="index.html"><img id="logo" src="http://clipart-library.com/images_k/silhouette-train/silhouette-train-15.png"></a>
 
     <div class="collapse navbar-collapse">
     
@@ -82,48 +82,17 @@
         <a class="nav-link" href="#help">Help</a>
       </li>
     </ul>
-   <form class="d-flex" id="searchForm">
-    <input class="form-control" type="text" id="searchInput" placeholder="Search..." required>
-    <button class="btn btn-warning" type="button" onclick="searchRedirect()">Search</button>
-</form>
 
-<script>
-    function searchRedirect() {
-        var searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
-
-        // Check if the search query is 'mrt' (case insensitive)
-        if (searchQuery === 'mrt') {
-            // Check if 'mrt.html' exists in the correct directory
-            window.location.href = 'mrt.html';  // Redirect to mrt.html (relative path)
-        } else {
-            alert('Sorry pal, this seems to not exist');
-        }
-    
-	 if (searchQuery === 'lrt 2') {
-            // Check if 'mrt.html' exists in the correct directory
-            window.location.href = 'index.html';  // Redirect to mrt.html (relative path)
-        } else {
-            alert('Sorry pal, this seems to not exist');
-        }
-
-	 if (searchQuery === 'lrt 1') {
-            // Check if 'mrt.html' exists in the correct directory
-            window.location.href = 'lrt.html';  // Redirect to mrt.html (relative path)
-        } else {
-            alert('Sorry pal, this seems to not exist');
-        }
-
-    }
-</script>
-
-
-
+    <form class="d-flex" action="index.html">
+            <input class="form-control" type="text" placeholder="search…">
+            <button class="btn btn-warning" type="button">Search</button>
+    </form>
     </div>
 </div>
 </nav>
-<br><br><br><br>
-<h1 style="text-align: center; color: black;">LRT-Line 2</h1>
-<br>   
+
+    <br><br><br><br>
+   
 
     <div class="row">
       <center>
@@ -141,9 +110,11 @@
     <div class="container-fluid" id="main">
     <div class="row">
       
-      <div class="col-md-4 d-flex justify-content-center">
-  <img id="map" style="max-height: 500px; width: 100%;" src="train.webp" alt="MRT Map">
-</div>
+      <div class="col-md-4">
+        <center>
+          <img id="map" style="height: 650px; width: 100%;" src="road.JPG">
+        </center>
+      </div>
 
             <div class="col-md-4" >
           <div class="col-md-12 form-group" id="station">
@@ -153,35 +124,43 @@
             <center>
               <select class="form-control" id="leavingFrom">
                 <option value="0">Choose a station...</option>
-                <option value="1">Santolan</option>
-                <option value="5.1">Katipunan</option>
-                <option value="8.6">Betty Go-Belmonte</option>
-                <option value="9.9">Gilmore</option>
-                <option value="10.4">J. Ruiz</option>
-                <option value="11.7">V. Mapa</option>
-                <option value="13.6">Pureza</option>
-                <option value="14.9">Legarda</option>
-                <option value="15.6">Recto</option>
+                <option value="0">Bottom Road</option>
+                <option value="1">Pineapple St.</option>
+                <option value="3">Blvd. of Broken Dreams</option>
+                <option value="5">Egg</option>
+                <option value="5.5">D. Avenue</option>
+                <option value="6">Pole</option>
+                <option value="7">St. Marky Wu Street</option>
+                <option value="8.5">Pork Soda Boulevard</option>
+                <option value="9">Springlawn Street</option>
+                <option value="9.8">"I'm out of name ideas" Avenue</option>
+                <option value="10.4">Spotlight Station</option>
+                <option value="10.8">Sad Boy Stop</option>
+                <option value="11.6">Bus</option>
               </select>
             <br>
           <span id="station-label"><label for="goingTo">GOING TO:</label></span>
             <br>
               <select class="form-control" id="goingTo">
                 <option value="0">Choose a station...</option>
-                <option value="1">Santolan</option>
-                <option value="5.1">Katipunan</option>
-                <option value="8.6">Betty Go-Belmonte</option>
-                <option value="9.9">Gilmore</option>
-                <option value="10.4">J. Ruiz</option>
-                <option value="11.7">V. Mapa</option>
-                <option value="13.6">Pureza</option>
-                <option value="14.9">Legarda</option>
-                <option value="15.6">Recto</option>
+                <option value="0">Bottom Road</option>
+                <option value="1">Pineapple St.</option>
+                <option value="3">Blvd. of Broken Dreams</option>
+                <option value="5">Egg</option>
+                <option value="5.5">D. Avenue</option>
+                <option value="6">Pole</option>
+                <option value="7">St. Marky Wu Street</option>
+                <option value="8.5">Pork Soda Boulevard</option>
+                <option value="9">Springlawn Street</option>
+                <option value="9.8">"I'm out of name ideas" Avenue</option>
+                <option value="10.4">Spotlight Station</option>
+                <option value="10.8">Sad Boy Stop</option>
+                <option value="11.6">Bus</option>
               </select>
               
               <button onclick="calculateFare()" class="btn btn-success" id="compute">Regular Fare</button>
               <button onclick="discountFare()" class="btn btn-primary" id="compute">Discounted Fare</button>
-             <img id="card" style="height: 200px; width: 70%;" src="ticket.jpg">
+             <img id="card" style="height: 200px; width: 70%;" src="ticket.JPG">
              </center>
       </div>
 
@@ -222,7 +201,6 @@
           
           //display answer in a paragraph element
           document.getElementById("DisplayAns").innerHTML = fare;
-
     }
       </script>
         
@@ -244,11 +222,11 @@
 
       </div>
    
-        <p>The MRT train schedule remains fairly consistent, unless there are chaotic situations.<br>(like Rodgers and his stupid guns)</p>
-        
+        <p>The MRT train schedule remains fairly consistent, unless there are chaotic situations.</p>
+        <h6>(like that Chuck Rodgers guy and his stupid guns)</h6>
         <br><br>
 
-        <img src="sched.jpg" id="trainsched">
+        <img src="sched.JPG" id="trainsched">
       
       </center>
     </div>   
@@ -288,7 +266,7 @@
         </form>
       </div>
           <script>
-         
+            
           </script>
           
           <script>
@@ -313,61 +291,18 @@
       <div class="col-md-4">
       <p>
         If you ever need help, feel free to contact us.
-        <a href="face.html" class="fa fa-facebook"></a>
-        <a href="insta.html" class="fa fa-instagram"></a>
+        <a href="www.facebook.com" class="fa fa-facebook"></a>
+        <a href="www.instagram.com" class="fa fa-instagram"></a>
       </p>
       <p>
-        <b>Our Office:</b> <i>ES Train Services<br>24 Somewhere Street<br>Quezon City, Metro Manila, Philippines</i>
+        <b>Our Office:</b> <i>ES Train Services<br>17 St. Marky Wu Street<br>Monkey Ville, Metro Manila, Philippines</i>
       </p>
 
       <br><br>
       <span>&copy; 2025 Eris Salvador</span>
-
-      <p>References<br>https://www.lrta.gov.ph/lrt-2-operating-schedule/<br>https://colnect.com/en/transportation_tickets/transportation_ticket/49839-Single_Journey_Ticket_for_LRT-2-LRT-2-LRTA_-_Light_Rail_Transit_Authority-Philippines<br>https://grit.ph/wp-content/uploads/2021/11/MRT-map.png</p>
       
       </div>
       </center>
     </div>
-	<script>// Compute for regular fare
-function calculateFare() {
-    let leavingFrom = document.getElementById("leavingFrom").value;
-    let goingTo = document.getElementById("goingTo").value;
-
-    // Check if both stations are selected
-    if (leavingFrom === "0" || goingTo === "0") {
-        alert("You haven't chosen a station yet");
-        document.getElementById("DisplayAns").innerHTML = "";  // Clear the fare display
-        return;  // Stop further execution
-    }
-
-    let basefare = 14;
-    let distance = goingTo - leavingFrom;
-    let fare = distance + basefare; 
-
-    // Display the calculated fare
-    document.getElementById("DisplayAns").innerHTML = fare;
-}
-
-// Compute for discounted fare
-function discountFare() {
-    let leavingFrom = document.getElementById("leavingFrom").value;
-    let goingTo = document.getElementById("goingTo").value;
-
-    // Check if both stations are selected
-    if (leavingFrom == "0" || goingTo == "0") {
-        alert("You haven't chosen a station yet");
-        document.getElementById("DisplayAns").innerHTML = "";  // Clear the fare display
-        return;  // Stop further execution
-    }
-
-    let basefare = 14;
-    let distance = goingTo - leavingFrom;
-    let disc_fare = 0.80 * (distance + basefare); 
-    let fare = disc_fare.toFixed(2);
-
-    // Display the discounted fare
-    document.getElementById("DisplayAns").innerHTML = fare;
-}
-</script>
 </body>
 </html>
