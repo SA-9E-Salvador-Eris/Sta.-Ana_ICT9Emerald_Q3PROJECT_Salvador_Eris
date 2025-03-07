@@ -67,7 +67,7 @@
 <body>
 	<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #04175c;">
 <div class="container-fluid">
-  <a class="navbar-brand" href="index.html"><img id="logo" src="http://clipart-library.com/images_k/silhouette-train/silhouette-train-15.png"></a>
+  <a class="navbar-brand" href="index.html"><img id="logo" src="es.jpg"></a>
 
     <div class="collapse navbar-collapse">
     
@@ -82,14 +82,57 @@
         <a class="nav-link" href="#help">Help</a>
       </li>
     </ul>
+   
+   <form class="d-flex" id="searchForm">
+    <input class="form-control" type="text" id="searchInput" placeholder="Search..." required>
+    <button class="btn btn-success" type="button" onclick="searchRedirect()">Search</button>
+</form>
 
-    <form class="d-flex" action="index.html">
-            <input class="form-control" type="text" placeholder="search…">
-            <button class="btn btn-warning" type="button">Search</button>
-    </form>
+<script>
+    function searchRedirect() {
+        var searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
+
+        // Check if the search query is 'mrt' (case insensitive)
+        if (searchQuery === 'mrt') {
+            // Check if 'mrt.html' exists in the correct directory
+            window.location.href = 'mrt.html';  // Redirect to mrt.html (relative path)
+        } else {
+            alert('Sorry pal, this seems to not exist');
+        }
+    
+	 if (searchQuery === 'lrt 2') {
+            // Check if 'mrt.html' exists in the correct directory
+            window.location.href = 'index.html';  // Redirect to index.html (relative path)
+        } else {
+            alert('Sorry pal, this seems to not exist');
+        }
+
+	 if (searchQuery === 'lrt 1') {
+            // Check if 'mrt.html' exists in the correct directory
+            window.location.href = 'lrt.html';  // Redirect to lrt.html (relative path)
+        } else {
+            alert('Sorry pal, this seems to not exist');
+        }
+
+    }
+</script>
+
     </div>
 </div>
 </nav>
+<br><br><br><br>
+<h1 style="text-align: center; color: black;">MRT-Line 1</h1>
+<br>   
+
+    <div class="row">
+      <center>
+      <div class="col-md-6" style="background-color: black; color: white;">
+        <script>	
+        document.write("<h2>Fare Guide</h2>");
+        </script>
+      </div>
+    </center>
+    </div>    
 
     <br><br><br><br>
    
